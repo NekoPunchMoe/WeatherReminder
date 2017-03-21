@@ -21,5 +21,13 @@
    {% endfor %}
    </tbody>
  </table>
+<h2>Add Reminders</h2>
+   <form method='post'>
+       {% csrf_token %}
+       {{ form.as_p }}
+       <input type="submit" value="Add">
+   </form>
+<h2>Send Email</h2>
+    <a href="test_email">Email me tomorrow's weather now</a>
 </div>
 {% endblock %}
